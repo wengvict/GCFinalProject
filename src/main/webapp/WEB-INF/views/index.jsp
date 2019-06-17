@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-suh dude?
+
+<a href="search">Search</a>
+
 </body>
 </html>

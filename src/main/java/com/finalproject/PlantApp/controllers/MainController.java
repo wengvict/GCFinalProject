@@ -11,5 +11,10 @@ public class MainController {
 	public ModelAndView home() {
 		return new ModelAndView("index");
 	}
+	
+	@RequestMapping("/search")
+	public ModelAndView searchPage() {
+		return new ModelAndView("searchpage");
+	}
 
 }
