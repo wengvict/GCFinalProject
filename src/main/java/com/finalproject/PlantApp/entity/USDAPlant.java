@@ -6,31 +6,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class USDAPlant {
 	
-	private String Symbol;
+	@JsonProperty("Family")
+	private String family;
+	@JsonProperty("Family_Common_Name")
+	private String familyCommonName;
+	@JsonProperty("Category")
+	private String category;
+	@JsonProperty("Class")
+	private String plantclass;
 	@JsonProperty("Scientific_Name_x")
 	private String scientificName;
 	@JsonProperty("Common_Name")
 	private String commonName;
-	private String Duration;
+	@JsonProperty("Duration")
+	private String duration;
 	
 	public USDAPlant() {
 		super();
 	}
 
-	public USDAPlant(String symbol, String scientificName, String commonName, String duration) {
+	public USDAPlant(String family, String familyCommonName, String category, String plantclass, String scientificName,
+			String commonName, String duration) {
 		super();
-		Symbol = symbol;
+		this.family = family;
+		this.familyCommonName = familyCommonName;
+		this.category = category;
+		this.plantclass = plantclass;
 		this.scientificName = scientificName;
 		this.commonName = commonName;
-		Duration = duration;
+		this.duration = duration;
 	}
 
-	public String getSymbol() {
-		return Symbol;
+	public String getFamily() {
+		return family;
 	}
 
-	public void setSymbol(String symbol) {
-		Symbol = symbol;
+	public void setFamily(String family) {
+		this.family = family;
+	}
+
+	public String getFamilyCommonName() {
+		return familyCommonName;
+	}
+
+	public void setFamilyCommonName(String familyCommonName) {
+		this.familyCommonName = familyCommonName;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getPlantclass() {
+		return plantclass;
+	}
+
+	public void setPlantclass(String plantclass) {
+		this.plantclass = plantclass;
 	}
 
 	public String getScientificName() {
@@ -50,18 +86,20 @@ public class USDAPlant {
 	}
 
 	public String getDuration() {
-		return Duration;
+		return duration;
 	}
 
 	public void setDuration(String duration) {
-		Duration = duration;
+		this.duration = duration;
 	}
 
 	@Override
 	public String toString() {
-		return "USDAPlant [Symbol=" + Symbol + ", scientificName=" + scientificName + ", commonName=" + commonName
-				+ ", Duration=" + Duration + "]";
+		return "USDAPlant [family=" + family + ", familyCommonName=" + familyCommonName + ", category=" + category
+				+ ", plantclass=" + plantclass + ", scientificName=" + scientificName + ", commonName=" + commonName
+				+ ", duration=" + duration + "]";
 	}
+
 	
 	
 

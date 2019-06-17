@@ -15,6 +15,12 @@
 	</form>
 	
 	<br>
-	${plantresult }
+	Scientific name: ${plantresult.scientificName }
+	<br>
+	Common name: ${plantresult.commonName }
+	<br>
+	Duration: ${plantresult.duration }
+	<br>
+	Common family: ${plantresult.familyCommonName }
 </body>
 </html>

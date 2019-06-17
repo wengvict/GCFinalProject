@@ -20,6 +20,8 @@ public class SearchController {
 	
 	@RequestMapping("/findplants")
 	public ModelAndView mainSearch(@RequestParam("plantname") String plantname) {
+		plantname.toLowerCase();
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Accept", HttpHeaders.ACCEPT);
 		
@@ -32,20 +34,21 @@ public class SearchController {
 		int plantindex = 0;
 		
 		for(int i = 0; i < getPlants.getBody().getData().size();i++) {
-			if(plantname.equalsIgnoreCase(getPlants.getBody().getData().get(i).getCommonName())) {
+			if(plantname.equals(getPlants.getBody().getData().get(i).getCommonName())) {
 				
 				plantindex = i;
 			} //else if(plantname.equalsIgnoreCase(getPlants.getBody().getData().get(i).getScientificName())) {			
-//				flag++;
+				
 //				plantindex = i;
 //			}
 		}
 		
 		
 			plant = getPlants.getBody().getData().get(plantindex);
+			System.out.println(plant.getDuration());
 		
 		
-		return new ModelAndView("redirect:searchpage","plantresult", plant.getCommonName());
+		return new ModelAndView("searchpage","plantresult", plant);
 	}
 
 }
