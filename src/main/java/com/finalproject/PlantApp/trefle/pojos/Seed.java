@@ -55,6 +55,28 @@ public class Seed {
 	public void setBloom_period(String bloom_period) {
 		this.bloom_period = bloom_period;
 	}
+	public Seed(String vegetative_spread_rate, String small_grain, String seeds_per_pound, String seeding_vigor,
+			String seed_spread_rate, String commercial_availability, String bloom_period) {
+		super();
+		this.vegetative_spread_rate = vegetative_spread_rate;
+		this.small_grain = small_grain;
+		this.seeds_per_pound = seeds_per_pound;
+		this.seeding_vigor = seeding_vigor;
+		this.seed_spread_rate = seed_spread_rate;
+		this.commercial_availability = commercial_availability;
+		this.bloom_period = bloom_period;
+	}
+	public Seed() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Seed [vegetative_spread_rate=" + vegetative_spread_rate + ", small_grain=" + small_grain
+				+ ", seeds_per_pound=" + seeds_per_pound + ", seeding_vigor=" + seeding_vigor + ", seed_spread_rate="
+				+ seed_spread_rate + ", commercial_availability=" + commercial_availability + ", bloom_period="
+				+ bloom_period + "]";
+	}
 	
 	
 }
