@@ -1,5 +1,8 @@
 package com.finalproject.PlantApp.trefle.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Planting_density_maximum {
 	private Double sqm;
 	private Double acre;
