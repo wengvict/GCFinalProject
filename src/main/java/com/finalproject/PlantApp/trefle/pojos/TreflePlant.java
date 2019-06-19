@@ -5,26 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TreflePlant {
 	
+//	private String scientific_name;
+//	private Order order;
+//	private Main_Species main_species;
+//	private Genus genus;
+//	private Family family;
+//	private Division division;
+	
 	private String scientific_name;
-	private Order order;
-	private Main_Species main_species;
-	private Genus genus;
-	private Family family;
-	private Division division;
+	private Integer id;
+	private String complete_data;
+	private String common_name;
 	
 	public TreflePlant() {
 		super();
 	}
 
-	public TreflePlant(String scientific_name, Order order, Main_Species main_species, Genus genus, Family family,
-			Division division) {
+	public TreflePlant(String scientific_name, Integer id, String complete_data, String common_name) {
 		super();
 		this.scientific_name = scientific_name;
-		this.order = order;
-		this.main_species = main_species;
-		this.genus = genus;
-		this.family = family;
-		this.division = division;
+		this.id = id;
+		this.complete_data = complete_data;
+		this.common_name = common_name;
 	}
 
 	public String getScientific_name() {
@@ -35,53 +37,36 @@ public class TreflePlant {
 		this.scientific_name = scientific_name;
 	}
 
-	public Order getOrder() {
-		return order;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setOrder(Order order) {
-		this.order = order;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public Main_Species getMain_species() {
-		return main_species;
+	public String getComplete_data() {
+		return complete_data;
 	}
 
-	public void setMain_species(Main_Species main_species) {
-		this.main_species = main_species;
+	public void setComplete_data(String complete_data) {
+		this.complete_data = complete_data;
 	}
 
-	public Genus getGenus() {
-		return genus;
+	public String getCommon_name() {
+		return common_name;
 	}
 
-	public void setGenus(Genus genus) {
-		this.genus = genus;
-	}
-
-	public Family getFamily() {
-		return family;
-	}
-
-	public void setFamily(Family family) {
-		this.family = family;
-	}
-
-	public Division getDivision() {
-		return division;
-	}
-
-	public void setDivision(Division division) {
-		this.division = division;
+	public void setCommon_name(String common_name) {
+		this.common_name = common_name;
 	}
 
 	@Override
 	public String toString() {
-		return "TreflePlant [scientific_name=" + scientific_name + ", order=" + order + ", main_species=" + main_species
-				+ ", genus=" + genus + ", family=" + family + ", division=" + division + "]";
+		return "TreflePlant [scientific_name=" + scientific_name + ", id=" + id + ", complete_data=" + complete_data
+				+ ", common_name=" + common_name + "]";
 	}
-	
-		
+
 	
 
 }

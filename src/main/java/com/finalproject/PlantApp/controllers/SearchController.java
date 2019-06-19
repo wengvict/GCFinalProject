@@ -1,20 +1,17 @@
 package com.finalproject.PlantApp.controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.finalproject.PlantApp.entity.USDAOuter;
-import com.finalproject.PlantApp.entity.USDAPlant;
+import com.finalproject.PlantApp.trefle.pojos.TrefleParent;
+import com.finalproject.PlantApp.trefle.pojos.TreflePlant;
 
 @Controller
 public class SearchController {
@@ -22,7 +19,9 @@ public class SearchController {
 	RestTemplate rt = new RestTemplate();
 	
 	@RequestMapping("/findplants")
-	public ModelAndView mainSearch(@RequestParam("plantname") String plantname) {
+	public ModelAndView mainSearch(@RequestParam("plantname") String plantname,
+			@RequestParam("nametype") String nametype) {
+		
 		plantname.toLowerCase();
 		
 		Map<String, String> params = new HashMap<>();
@@ -32,25 +31,35 @@ public class SearchController {
 		@SuppressWarnings("unchecked")
 		Map<String, String> response = rt.postForObject(url, params,Map.class);
 		String token = response.get("token");
-		System.out.println(token);
-		String plUrl = "https://trefle.io/api/plants?token="+token;
+		//System.out.println(token);
+		String plUrl = "https://trefle.io/api/plants?q=" + plantname + "&token=" +token;
 		
-		for(int i = 0; i < getPlants.getBody().getData().size();i++) {
-			if(plantname.equals(getPlants.getBody().getData().get(i).getCommonName())) {
+		TreflePlant[] getPlant = rt.getForObject(plUrl, TreflePlant[].class);
+		ArrayList<TreflePlant> plantList = new ArrayList<TreflePlant>();
+		
+		//System.out.println(getPlant[0].getId());
+		for(int i = 0; i < getPlant.length;i++) {
+			
+			if(getPlant[i].getCommon_name() != null) {
+				//System.out.println(getPlant[i].getCommon_name());
 				
-				plantindex = i;
-			} //else if(plantname.equalsIgnoreCase(getPlants.getBody().getData().get(i).getScientificName())) {			
-				
-//				plantindex = i;
-//			}
+				if(nametype.equalsIgnoreCase("common")) {
+					TreflePlant plant = getPlant[i];
+					plantList.add(plant);
+					
+				} else if(nametype.equalsIgnoreCase("scientific")) {
+					TreflePlant plant = getPlant[i];
+					plantList.add(plant);
+				}
+			}	
 		}
 		
 		
-			plant = getPlants.getBody().getData().get(plantindex);
-			System.out.println(plant.getDuration());
+		// nested for loop in jsp page for toxicity api?
 		
-		
-		return new ModelAndView("searchpage","plantresult", plant);
+		System.out.println(plantList);
+		//System.out.println(plantList);
+		return new ModelAndView("searchresults","plantresult", plantList);
 	}
 
 }

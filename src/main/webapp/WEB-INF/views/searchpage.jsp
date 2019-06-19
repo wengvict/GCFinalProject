@@ -11,16 +11,12 @@
 	<h1>Enter a plant name to search:</h1>
 	<form action="findplants">
 		Plant: <input type="text" name="plantname" placeholder="Try 'aloe vera'">
+		<input type="radio" name="nametype" value="scientific"> Scientific
+		<input type="radio" name="nametype" value="common"> Common
 		<input type="submit" value="Find my plant!">
 	</form>
 	
 	<br>
-	Scientific name: ${plantresult.scientificName }
-	<br>
-	Common name: ${plantresult.commonName }
-	<br>
-	Duration: ${plantresult.duration }
-	<br>
-	Common family: ${plantresult.familyCommonName }
+
 </body>
 </html>
