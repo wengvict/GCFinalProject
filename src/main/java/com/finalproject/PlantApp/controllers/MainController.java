@@ -19,12 +19,12 @@ public class MainController {
 	
 	@RequestMapping("/AddDate")
 		public ModelAndView addDate() {
-		return new ModelAndView("AddDateManually");
+		return new ModelAndView("adddatemanually");
 	}
 	
-	@RequestMapping("/inventory")
+	@RequestMapping("/inventoryno")
 		public ModelAndView getInventory() {
-		return new ModelAndView("GardenInventory");
+		return new ModelAndView("gardeninventory");
 	}
 
 }
