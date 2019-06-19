@@ -1,5 +1,8 @@
 package com.finalproject.PlantApp.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -22,16 +25,15 @@ public class SearchController {
 	public ModelAndView mainSearch(@RequestParam("plantname") String plantname) {
 		plantname.toLowerCase();
 		
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Accept", HttpHeaders.ACCEPT);
+		Map<String, String> params = new HashMap<>();
 		
-		ResponseEntity<USDAOuter> getPlants = rt.exchange("https://plantsdb.xyz/search",
-				HttpMethod.GET, new HttpEntity<>("parameters", headers),
-				USDAOuter.class);
-		
-		USDAPlant plant = new USDAPlant();
-		int flag = 0;
-		int plantindex = 0;
+		String url = "https://trefle.io/api/auth/claim?token=UGt4TGlIYTNNa3VkbzQ1Q2tUZjZCQT09&origin=http://localhost:8080/";
+
+		@SuppressWarnings("unchecked")
+		Map<String, String> response = rt.postForObject(url, params,Map.class);
+		String token = response.get("token");
+		System.out.println(token);
+		String plUrl = "https://trefle.io/api/plants?token="+token;
 		
 		for(int i = 0; i < getPlants.getBody().getData().size();i++) {
 			if(plantname.equals(getPlants.getBody().getData().get(i).getCommonName())) {
