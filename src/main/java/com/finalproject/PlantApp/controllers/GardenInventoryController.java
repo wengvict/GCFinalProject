@@ -63,7 +63,7 @@ public class GardenInventoryController {
 	@RequestMapping("/manualwater")
 	public ModelAndView manualWaterPage(@RequestParam("id")Integer id) {
 		PlantInventory plant = pir.findById(id).get();
-		return new ModelAndView("manualwater","plant", plant);
+		return new ModelAndView("adddatemanually","plant", plant);
 		
 	}
 	
