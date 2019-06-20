@@ -14,7 +14,7 @@
 <thead>
 <tr>
 <td>Name</td>
-<td>ID</td>
+
 <td>Water</td>
 <td>Last Water Date</td>
 <td>Next Water Date</td>
@@ -26,7 +26,7 @@
 <c:forEach items="${ p }" var="t">
 <tr>
 <td>${ t.plantname }</td>
-<td><a href="details?num=${ t.id }">${ t.id }</a></td>
+
 <td><a href="water?id=${ t.id }"> Water</a>
 <br>
 <a href="manualwater?id=${ t.id }">Add date manually</a>
