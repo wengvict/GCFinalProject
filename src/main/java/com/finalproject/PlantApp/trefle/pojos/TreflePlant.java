@@ -14,14 +14,14 @@ public class TreflePlant {
 	
 	private String scientific_name;
 	private Integer id;
-	private String complete_data;
+	private boolean complete_data;
 	private String common_name;
 	
 	public TreflePlant() {
 		super();
 	}
 
-	public TreflePlant(String scientific_name, Integer id, String complete_data, String common_name) {
+	public TreflePlant(String scientific_name, Integer id, boolean complete_data, String common_name) {
 		super();
 		this.scientific_name = scientific_name;
 		this.id = id;
@@ -45,11 +45,11 @@ public class TreflePlant {
 		this.id = id;
 	}
 
-	public String getComplete_data() {
+	public boolean getComplete_data() {
 		return complete_data;
 	}
 
-	public void setComplete_data(String complete_data) {
+	public void setComplete_data(boolean complete_data) {
 		this.complete_data = complete_data;
 	}
 
