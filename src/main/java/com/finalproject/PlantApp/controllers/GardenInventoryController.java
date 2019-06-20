@@ -57,7 +57,7 @@ public class GardenInventoryController {
 		plant.setNeedsWater(0);
 		pir.save(plant);
 		System.out.println(plant);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/inventory");
 	}
 	
 	@RequestMapping("/manualwater")
