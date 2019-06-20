@@ -12,7 +12,7 @@
 	<form action="findplants">
 		Plant: <input type="text" name="plantname" placeholder="Try 'aloe vera'">
 		<input type="radio" name="nametype" value="scientific"> Scientific
-		<input type="radio" name="nametype" value="common"> Common
+		<input type="radio" name="nametype" value="common" checked> Common
 		<input type="submit" value="Find my plant!">
 	</form>
 	

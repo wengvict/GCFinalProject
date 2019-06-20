@@ -111,7 +111,7 @@ public class SearchController {
 		pir.save(addplant);
 		
 		// this saves plant but we will have to work on showing the results table with the expressions language tag
-		return new ModelAndView("redirect:/searchresults", "addconfirm", "Plant has been added!");
+		return new ModelAndView("redirect:/inventory", "addconfirm", "Plant has been added!");
 	}
 
 
