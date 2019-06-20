@@ -6,24 +6,24 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
-	
+
 	@RequestMapping("/")
 	public ModelAndView home() {
 		return new ModelAndView("index");
 	}
-	
+
 	@RequestMapping("/search")
 	public ModelAndView searchPage() {
 		return new ModelAndView("searchpage");
 	}
-	
+
 	@RequestMapping("/AddDate")
-		public ModelAndView addDate() {
+	public ModelAndView addDate() {
 		return new ModelAndView("adddatemanually");
 	}
-	
+
 	@RequestMapping("/inventoryno")
-		public ModelAndView getInventory() {
+	public ModelAndView getInventory() {
 		return new ModelAndView("gardeninventory");
 	}
 

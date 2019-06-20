@@ -8,19 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+${addconfirm }
 	<table>
 		<thead>
 			<tr>
 				<td>Scientific Name</td>
 				<td>Common Name</td>
+				<td> </td>
+
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${plantresult }" var="p">
 				<tr>
-					<td>${p.scientific_name }</td>
+					<td><a href="/plantpage?plantid=${p.id }">${p.scientific_name }</a></td>
 					<td>${p.common_name }</td>
+					<td><a href="/addplant?scientificname=${p.scientific_name }">Add to Garden</a></td>				
 				</tr>
 			</c:forEach>
 		</tbody>
