@@ -18,17 +18,59 @@
 
 <%@ include file="partials/navbar.jsp"%>
 <h1>Cat lives matter</h1>
+<form action="/searchtoxstring">
+Search by name: <input type="text" name="toxstring" placeholder="Try 'aloe'"> 
+<input type="submit" value="Pet Lives Matter">
+
+</form>
+
 <form action="toxictopets">
+
+<br>
+<br>
+<h5>or search by category</h5>
+<br>
+
 Cats<input type="checkbox" name="cats" value="cats">
 Dogs<input type="checkbox" name="dogs" value="dogs">
-Horse<input type="checkbox" name="horse" value="horse">
-<input type="submit" value="Cat Lives Matter">
+Horse<input type="checkbox" name="horse" value="horse"><br>
+<input type="submit" value="Pet Lives Matter">
 </form>
 
 <p>${ cats }</p>
 <p>${ dogs }</p>
 <p>${ horse }</p>
 
+<table>
+
+        <thead>
+
+            <tr>
+
+               <td>Name</td>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <c:forEach items="${plantsearch }" var="toxplant">
+
+                <tr>
+
+                    <td><a href="/toxicdetails?id=${toxplant.id }">${toxplant.commonname}</a></td>
+
+                 
+
+                </tr>
+
+            </c:forEach>
+
+        </tbody>
+
+    </table>
+ 
 <h3>list of toxic shit</h3>
 
     <table>
