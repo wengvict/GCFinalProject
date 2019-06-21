@@ -31,7 +31,7 @@
 					<label class="btn btn-success"> <input type="radio"
 						name="nametype" value="scientific">Scientific
 					</label> <label class="btn btn-success active" checked> <input type="radio"
-						name="nametype" value="common">Common
+						name="nametype" value="common" checked>Common
 					</label>
 				</div>
 
