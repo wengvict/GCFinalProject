@@ -11,19 +11,25 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Last Water Date</title>
 </head>
 <body>
 	<%@ include file="partials/navbar.jsp"%>
 
-
+<div class="jumbotron">
 <h1>What was the last date you watered this plant?</h1>
+<hr class="my-4">
 <form action="adddate">
-<input type="hidden" name="id" value="${ plant.id }">
-${ plant.plantname }<input type="date" name="waterdate">
-<input type="submit" value="Add Date">
+<div class="form-group" align="center">
+  <label class="col-form-label col-form-label-lg" for="waterdate">${ plant.plantname }</label>
+  <br>
+<input type="hidden" name="id" value="${ plant.id }" id="waterdate">
+ <input class="form-control form-control-lg" type="date" placeholder=".form-control-lg" id="inputLarge" name="waterdate">
+<br>
+<input type="submit" value="Add Date" class="btn btn-info">
+</div>
 </form>
-
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

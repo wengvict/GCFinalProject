@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Results for ${ search }</title>
 </head>
 <body>
 
@@ -20,28 +20,30 @@
 
 
 ${addconfirm }
-	<table>
+	<table class="table table-hover">
 		<thead>
-			<tr>
+			<tr class="table-success">
 				<td>Scientific Name</td>
 				<td>Common Name</td>
+				<td> </td>
 				<td> </td>
 
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${plantresult }" var="p">
+			<c:forEach items="${ map }" var="p">
 				<tr>
-					<td><a href="/plantpage?plantid=${p.id }">${p.scientific_name }</a></td>
-					<td>${p.common_name }</td>
-					<td><a href="/addplant?scientificname=${p.scientific_name }">Add to Garden</a></td>				
+				 	<td><a href="/plantpage?plantid=${p.key.id }">${p.key.scientific_name }</a></td>
+					<td>${p.key.common_name }</td>
+					<td><img src="${ p.value.url }" width="200" height="200"></td>
+					<td><a href="/addplant?scientificname=${p.key.scientific_name }">Add to Garden</a></td>		 		
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 
 
-
+<a href="allthethings?name=${ search }" class="btn btn-primary btn-lg">I don't care about complete data</a>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

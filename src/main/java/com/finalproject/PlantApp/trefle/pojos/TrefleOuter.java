@@ -1,5 +1,7 @@
 package com.finalproject.PlantApp.trefle.pojos;
 
+import java.util.ArrayList;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -8,6 +10,7 @@ public class TrefleOuter {
 	private String scientific_name;
 	private Order order;
 	private Main_Species main_species;
+	private ArrayList<PlantPics> images;
 	private Genus genus;
 	private Family family;
 	private Division division;
@@ -17,7 +20,7 @@ public class TrefleOuter {
 	}
 
 	public TrefleOuter(String scientific_name, Order order, Main_Species main_species, Genus genus, Family family,
-			Division division) {
+			Division division, ArrayList<PlantPics> images) {
 		super();
 		this.scientific_name = scientific_name;
 		this.order = order;
@@ -25,6 +28,15 @@ public class TrefleOuter {
 		this.genus = genus;
 		this.family = family;
 		this.division = division;
+		this.images = images;
+	}
+
+	public ArrayList<PlantPics> getImages() {
+		return images;
+	}
+
+	public void setImages(ArrayList<PlantPics> images) {
+		this.images = images;
 	}
 
 	public String getScientific_name() {

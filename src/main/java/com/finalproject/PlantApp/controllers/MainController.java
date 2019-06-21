@@ -17,14 +17,5 @@ public class MainController {
 		return new ModelAndView("searchpage");
 	}
 
-	@RequestMapping("/AddDate")
-	public ModelAndView addDate() {
-		return new ModelAndView("adddatemanually");
-	}
-
-	@RequestMapping("/inventoryno")
-	public ModelAndView getInventory() {
-		return new ModelAndView("gardeninventory");
-	}
 
 }

@@ -16,15 +16,24 @@
 <body>
 
 	<%@ include file="partials/navbar.jsp"%>
+	
+	<div class="jumbotron">
 
-	<h1>Enter a plant name to search:</h1>
+	<h1 class="display-3">Enter a plant name to search:</h1>
+	<hr class="my-4">
 	<form action="findplants">
-		Plant: <input type="text" name="plantname"
-			placeholder="Try 'aloe vera'"> <input type="radio"
-			name="nametype" value="scientific"> Scientific <input
-			type="radio" name="nametype" value="common" checked> Common <input
-			type="submit" value="Find my plant!">
+			<div class="form-group">
+  <input class="form-control form-control-lg" type="text" placeholder="Try 'aloe vera'" name ="plantname" id="inputLarge">
+</div>
+<div class="form-group" align="center">
+			<br>
+			<input type="radio" name="nametype" value="scientific"> Scientific 
+			<input type="radio" name="nametype" value="common" checked> Common 
+			<br>
+			<input class="btn btn-primary btn-lg" type="submit" value="Find my plant!">
+			</div>
 	</form>
+	</div>
 
 	<br>
 

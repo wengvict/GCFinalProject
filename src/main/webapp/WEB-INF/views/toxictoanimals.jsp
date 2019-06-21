@@ -9,28 +9,23 @@
 	rel="stylesheet"
 	integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA"
 	crossorigin="anonymous">
-
 <meta charset="ISO-8859-1">
-<title>Home || Plantopedia</title>
+<title>Insert title here</title>
 </head>
 <body>
 
 <%@ include file="partials/navbar.jsp"%>
-
-<form>
-<!-- <a href="search">Search</a>
-<a href="GardenInventory"> Garden Inventory</a>
-<a href="AddDateManually"> Water Schedule</a> -->
-  
-     
-     <div>
-    <a class="btn btn-success" href="inventory">Garden Inventory</a>
-    <a class="btn btn-success" href="search">Search</a>
-    <a class="btn btn-success" href="toxicitypage">Toxic</a>
-    </div>
-    
+<h1>Cat lives matter</h1>
+<form action="toxictopets">
+Cats<input type="checkbox" name="cats" value="cats">
+Dogs<input type="checkbox" name="dogs" value="dogs">
+Horse<input type="checkbox" name="horse" value="horse">
+<input type="submit" value="Cat Lives Matter">
 </form>
 
+<p>${ cats }</p>
+<p>${ dogs }</p>
+<p>${ horse }</p>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

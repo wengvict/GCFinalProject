@@ -12,18 +12,17 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Plant Inventory</title>
 </head>
 <body>
 
 <%@ include file="partials/navbar.jsp"%>
 
-<h1>Hello Plants</h1>
-<table border=3>
+<h1>Your Plant Inventory</h1>
+<table border=3 class="table table-hover">
 <thead>
-<tr>
+<tr class="table-success">
 <td>Name</td>
-
 <td>Water</td>
 <td>Last Water Date</td>
 <td>Next Water Date</td>
@@ -36,13 +35,13 @@
 <tr>
 <td>${ t.plantname }</td>
 
-<td><a href="water?id=${ t.id }"> Water</a>
+<td><a href="water?id=${ t.id }" class="btn btn-info"> Water</a>
 <br>
-<a href="manualwater?id=${ t.id }">Add date manually</a>
+<a href="manualwater?id=${ t.id }" class="btn btn-info">Add date manually</a>
 </td>
 <td><span id="fuckjs" class="fuckjs">${ t.formattedDate }</span></td>
 <td>${ t.nextDateFormatted }</td>
-<td><a href="removeplant?id=${ t.id }">Delete</a></td>
+<td><a href="removeplant?id=${ t.id }" class="btn btn-danger">Delete</a></td>
 </tr>
 </c:forEach>
 </tbody>

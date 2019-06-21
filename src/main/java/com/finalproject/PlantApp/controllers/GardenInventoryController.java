@@ -9,12 +9,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.finalproject.PlantApp.apiservices.TrefleService;
 import com.finalproject.PlantApp.entity.PlantInventory;
 import com.finalproject.PlantApp.repository.PlantInventoryRepo;
 
@@ -28,23 +30,6 @@ public class GardenInventoryController {
 	@RequestMapping("/inventory")
 	public ModelAndView index() {
 		return new ModelAndView("gardeninventory", "p", pir.findAll());
-	}
-	@RequestMapping("/testing")
-	public ModelAndView testingTest() {
-		// this method requests and get a temporary token that can be passed into the URL
-		Map<String, String> params = new HashMap<>();
-		
-		String url = "https://trefle.io/api/auth/claim?token=UGt4TGlIYTNNa3VkbzQ1Q2tUZjZCQT09&origin=http://localhost:8080/";
-
-		@SuppressWarnings("unchecked")
-		Map<String, String> response = rt.postForObject(url, params,Map.class);
-		String token = response.get("token");
-		System.out.println(token);
-		String plUrl = "https://trefle.io/api/plants?token="+token;
-		//TODO need to add in the basic POJO for trefle here
-		//TrefleJson[] resp = rt.getForObject(plUrl, TrefleJson[].class);
-		//System.out.println(resp[0].getId());
-		return new ModelAndView("test");
 	}
 	
 	@RequestMapping("/water")
@@ -88,14 +73,14 @@ public class GardenInventoryController {
 		}
 		pir.save(plant);
 		System.out.println(plant);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/inventory");
 	}
 	
 	@RequestMapping("/removeplant")
 	public ModelAndView removePlant(@RequestParam("id")Integer id) {
 		PlantInventory plant = pir.findById(id).get();
 		pir.delete(plant);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/inventory");
 	}
 
 }
