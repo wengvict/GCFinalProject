@@ -23,13 +23,34 @@ public class ToxicToPetsController {
 
 	@RequestMapping("/toxicitypage")
 	public ModelAndView toxicityToPetsAll() {
-//		for (int i = 0; i < list.size(); i++) {
-//			//System.out.println(list.get(i).getCommonname());
-//		}
-		
-		return new ModelAndView("toxictoanimals","all", list);
+		ModelAndView mv = new ModelAndView("toxictoanimals", "all", list);
+		mv.addObject("counterstart", 0);
+		mv.addObject("counterend", 10);
+		return mv;
+	}
+
+	@RequestMapping("/toxicitypagenext")
+	public ModelAndView toxicityToPetsNext(@RequestParam("counterend") int end) {
+		ModelAndView mv = new ModelAndView("toxictoanimals", "all", list);
+		mv.addObject("counterstart", end + 1);
+		mv.addObject("counterend", end + 10);
+		return mv;
 	}
 	
+	@RequestMapping("/toxicitypageletter")
+	public ModelAndView toxicityByLetter(@RequestParam ("letter") char letter) {
+		ModelAndView mv = new ModelAndView("toxictoanimalbyletter");
+		ArrayList<PoisonToPets> arr = new ArrayList<>();
+		for(int i= 0; i<list.size(); i++) {
+			if(list.get(i).getCommonname().toLowerCase().charAt(0)== letter) {
+				arr.add(list.get(i));
+			}
+		}
+		mv.addObject("all",arr);
+		System.out.println(arr);
+		return mv;
+		
+	}
 
 	@RequestMapping("/toxictopets")
 	public ModelAndView toxicitySearch(@RequestParam(value = "cats", required = false) String cats,
@@ -79,20 +100,21 @@ public class ToxicToPetsController {
 		}
 		return mv;
 	}
+
 	@RequestMapping("/searchtoxstring")
-	public ModelAndView toxicString(@RequestParam("toxstring")String toxstring){
+	public ModelAndView toxicString(@RequestParam("toxstring") String toxstring) {
 		PoisonToPets plant = new PoisonToPets();
 		int index = 0;
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getCommonname().contains("adam")) {
-					plant = list.get(i);
-				
+				plant = list.get(i);
+
 			}
 
 		}
 		System.out.println(plant);
-		return new ModelAndView ("redirect:/toxicitypage","plantsearch", plant);
-		
+		return new ModelAndView("redirect:/toxicitypage", "plantsearch", plant);
+
 	}
 
 	@RequestMapping("/toxicdetails")

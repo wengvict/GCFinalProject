@@ -87,7 +87,7 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
 
         <tbody>
 
-            <c:forEach items="${all }" var="p">
+            <c:forEach items="${all}" var="p" begin="${counterstart }" end="${counterend }">
 
                 <tr>
 
@@ -102,6 +102,34 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
         </tbody>
 
     </table>
+    <a class="btn btn-primary" href="/toxicitypagenext?counterend=${counterend}">NEXT PAGE</a><br>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=a">A</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=b">B</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=d">C</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=e">E</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=f">F</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=g">G</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=h">H</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=i">I</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=j">J</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=k">K</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=l">L</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=m">M</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=n">N</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=o">O</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=p">P</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=q">Q</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=r">R</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=s">S</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=t">T</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=u">U</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=v">V</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=w">W</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=x">X</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=y">Y</a>
+    <a class="btn btn-primary" href="/toxicitypageletter?letter=z">Z</a>
+
+  
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
