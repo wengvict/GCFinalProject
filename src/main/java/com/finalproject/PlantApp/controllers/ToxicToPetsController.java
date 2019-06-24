@@ -36,20 +36,20 @@ public class ToxicToPetsController {
 		mv.addObject("counterend", end + 10);
 		return mv;
 	}
-	
+
 	@RequestMapping("/toxicitypageletter")
-	public ModelAndView toxicityByLetter(@RequestParam ("letter") char letter) {
+	public ModelAndView toxicityByLetter(@RequestParam("letter") char letter) {
 		ModelAndView mv = new ModelAndView("toxictoanimalbyletter");
 		ArrayList<PoisonToPets> arr = new ArrayList<>();
-		for(int i= 0; i<list.size(); i++) {
-			if(list.get(i).getCommonname().toLowerCase().charAt(0)== letter) {
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getCommonname().toLowerCase().charAt(0) == letter) {
 				arr.add(list.get(i));
 			}
 		}
-		mv.addObject("all",arr);
+		mv.addObject("all", arr);
 		System.out.println(arr);
 		return mv;
-		
+
 	}
 
 	@RequestMapping("/toxictopets")
@@ -103,18 +103,19 @@ public class ToxicToPetsController {
 
 	@RequestMapping("/searchtoxstring")
 	public ModelAndView toxicString(@RequestParam("toxstring") String toxstring) {
+		toxstring.toLowerCase();
+		ArrayList<PoisonToPets> poop = new ArrayList<>();
 		PoisonToPets plant = new PoisonToPets();
 		int index = 0;
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getCommonname().contains("adam")) {
-				plant = list.get(i);
+			if (list.get(i).getCommonname().toLowerCase().contains(toxstring)) {
+				poop.add(list.get(i));
 
 			}
 
 		}
-		System.out.println(plant);
-		return new ModelAndView("redirect:/toxicitypage", "plantsearch", plant);
 
+		return new ModelAndView("toxictospecific", "plantsearch", poop);
 	}
 
 	@RequestMapping("/toxicdetails")
