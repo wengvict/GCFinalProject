@@ -99,7 +99,8 @@ public class ToxicToPetsController {
 	public ModelAndView toxDeetz(@RequestParam("id") Integer id) {
 		PoisonToPets pp = new PoisonToPets();
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == id) {
+			int num = list.get(i).getId().intValue();
+			if (num == id) {
 				pp = list.get(i);
 			}
 		}
