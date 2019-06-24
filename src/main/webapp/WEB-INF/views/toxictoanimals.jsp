@@ -41,35 +41,7 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
 <p>${ dogs }</p>
 <p>${ horse }</p>
 
-<table>
 
-        <thead>
-
-            <tr>
-
-               <td>Name</td>
-
-            </tr>
-
-        </thead>
-
-        <tbody>
-
-            <c:forEach items="${plantsearch }" var="toxplant">
-
-                <tr>
-
-                    <td><a href="/toxicdetails?id=${toxplant.id }">${toxplant.commonname}</a></td>
-
-                 
-
-                </tr>
-
-            </c:forEach>
-
-        </tbody>
-
-    </table>
  
 <h3>list of toxic shit</h3>
 
