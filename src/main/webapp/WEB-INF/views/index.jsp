@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,28 +11,52 @@
 	crossorigin="anonymous">
 
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="indexstyle.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+
+
 <title>Home || Plantopedia</title>
 </head>
 <body>
 
-<%@ include file="partials/navbar.jsp"%>
+	<%@ include file="partials/navbar.jsp"%>
 
-<form>
-<!-- <a href="search">Search</a>
-<a href="GardenInventory"> Garden Inventory</a>
-<a href="AddDateManually"> Water Schedule</a> -->
-  
-     
-     <div>
-    <a class="btn btn-success" href="inventory">Garden Inventory</a>
-    <a class="btn btn-success" href="search">Search</a>
-    <a class="btn btn-success" href="toxicitypage">Toxic</a>
-    </div>
-    
-</form>
+	<div class="bg">
 
+		<div class="content">
+			<div class="movedown">
+				
+			</div>
+			
+			<div class="homemiddleblurb">Welcome to Plantopedia</div>
+			
+			<div class="homemiddleblurb2">A treasure trove of plant knowledge for beginners and experts alike.
+			</div>
+			<br>
+			<div class="homemiddleblurb3">
+			Begin by using the search bar in the top right and select whether you are using a scientific or common name
+			</div>
+			<br>
+			<div class="homemiddleblurb2">-or-</div>
+			<div class="homemiddleblurb3"><a href="/toxicitypage" class="indexlink">search our list of toxic plants</a> to make sure your new plant won't harm your furbabies. </div>
+			<br>
+			<div class="petlivesmatter">#petlivesmatter</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			<!-- 
+			<form>
+				<div>
+					<a class="btn btn-success" href="inventory">Garden Inventory</a> <a
+						class="btn btn-success" href="search">Search</a> <a
+						class="btn btn-success" href="toxicitypage">Toxic</a>
+				</div>
+			</form>
+		 -->
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
 	<script

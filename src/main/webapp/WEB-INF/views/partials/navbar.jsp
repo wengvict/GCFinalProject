@@ -15,6 +15,7 @@
 			bis_skin_checked="1">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="/">Home </a></li>
+				<li class="nav-item"><a class="nav-link" href="/toxicitypage">List of Toxic Plants</a></li>
 				<li class="nav-item"><a class="nav-link" href="/inventory">Garden
 						Inventory</a></li>
 				<li class="nav-item"><a class="nav-link" href="/search">Advanced
