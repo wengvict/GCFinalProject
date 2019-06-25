@@ -57,47 +57,59 @@ public class ToxicToPetsController {
 			@RequestParam(value = "dogs", required = false) String dogs,
 			@RequestParam(value = "horse", required = false) String horse) {
 
-		ModelAndView mv = new ModelAndView("toxictoanimals");
+		ModelAndView mv = new ModelAndView("petchecklist");
+		
+		ArrayList<PoisonToPets> poisonList = new ArrayList<>();
 
 		if (cats != null) {
-			ArrayList<PoisonToPets> poisonToCats = new ArrayList<>();
 			for (int i = 0; i < list.size(); i++) {
 				if (list.get(i).getCats() != null) {
 					if (list.get(i).getCats().equalsIgnoreCase("yes")) {
-						poisonToCats.add(list.get(i));
+						poisonList.add(list.get(i));
 					}
 
 				}
 			}
-			mv.addObject("cats", poisonToCats.get(0));
+			
 		}
 
 		if (dogs != null) {
-			ArrayList<PoisonToPets> poisonToDogs = new ArrayList<>();
 			for (int i = 0; i < list.size(); i++) {
 				if (list.get(i).getDogs() != null) {
 					if (list.get(i).getDogs().equalsIgnoreCase("yes")) {
-						poisonToDogs.add(list.get(i));
+						if(poisonList.contains(list.get(i))) {
+							continue;
+						}else {
+							poisonList.add(list.get(i));
+						}
+						
 					}
 
 				}
 			}
-			mv.addObject("dogs", poisonToDogs.get(0));
+			
 		}
 
 		if (horse != null) {
-			ArrayList<PoisonToPets> poisonToHorse = new ArrayList<>();
+			
 			for (int i = 0; i < list.size(); i++) {
 				if (list.get(i).getHorses() != null) {
 					if (list.get(i).getHorses().equalsIgnoreCase("yes")) {
-						poisonToHorse.add(list.get(i));
+						if(poisonList.contains(list.get(i))) {
+							continue;
+						}else {
+							poisonList.add(list.get(i));
+						}
+						
 					}
 
 				}
 			}
-			mv.addObject("horse", poisonToHorse.get(0));
+			
 
 		}
+		System.out.println(poisonList);
+		mv.addObject("plantlist", poisonList);
 		return mv;
 	}
 

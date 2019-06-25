@@ -31,15 +31,12 @@ Search by name: <input type="text" name="toxstring" placeholder="Try 'aloe'">
 <h5>or search by category</h5>
 <br>
 
-Cats<input type="checkbox" name="cats" value="cats">
+Cats<input type="checkbox" name="cats" value="cats" checked>
 Dogs<input type="checkbox" name="dogs" value="dogs">
 Horse<input type="checkbox" name="horse" value="horse"><br>
 <input type="submit" value="Pet Lives Matter">
 </form>
 
-<p>${ cats }</p>
-<p>${ dogs }</p>
-<p>${ horse }</p>
 
 
  
