@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+body {
+	/* The image used */
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.25) ), url("https://forums.botanicalgarden.ubc.ca/attachments/amabilis2-jpg.116097/");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+.container {
+	color: white;
+	font-family: "PT Serif";
+	text-align: center;
+	padding-top: 15em;
+}
+
+.title {
+	text-align: center;
+}
