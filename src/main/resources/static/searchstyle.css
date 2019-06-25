@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+body {
+	/* The image used */
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/colorful-of-dahlia-pink-flower-in-beautiful-garden-royalty-free-image-825886130-1554743243.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+}
+
+.container {
+	color: white;
+	font-family: "PT Serif";
+	text-align: center;
+	padding-top: 15em;
+}
+
+.title {
+	text-align: center;
+}
