@@ -17,7 +17,7 @@
 <body>
 
 <%@ include file="partials/navbar.jsp"%>
-<h1>Cat lives matter</h1>
+<h1>Pets Lives Matter</h1>
 <form action="/searchtoxstring">
 Search by name: <input type="text" name="toxstring" placeholder="Try 'aloe'"> 
 <input type="submit" value="Pet Lives Matter">
@@ -40,7 +40,7 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
 
 
  
-<h3>list of toxic shit</h3>
+<h3>Toxic Archive</h3>
 
     <table>
 

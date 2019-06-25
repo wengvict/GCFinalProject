@@ -116,18 +116,18 @@ public class ToxicToPetsController {
 	@RequestMapping("/searchtoxstring")
 	public ModelAndView toxicString(@RequestParam("toxstring") String toxstring) {
 		toxstring.toLowerCase();
-		ArrayList<PoisonToPets> poop = new ArrayList<>();
+		ArrayList<PoisonToPets> toxic = new ArrayList<>();
 		PoisonToPets plant = new PoisonToPets();
 		int index = 0;
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getCommonname().toLowerCase().contains(toxstring)) {
-				poop.add(list.get(i));
+				toxic.add(list.get(i));
 
 			}
 
 		}
 
-		return new ModelAndView("toxictospecific", "plantsearch", poop);
+		return new ModelAndView("toxictospecific", "plantsearch", toxic);
 	}
 
 	@RequestMapping("/toxicdetails")
