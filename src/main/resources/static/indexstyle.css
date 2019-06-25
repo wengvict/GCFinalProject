@@ -45,15 +45,10 @@
 	color: #f47c3c;
 }
 
-body, html {
-	height: 100%;
-	margin: 0;
-}
-
-.bg {
+body {
 	/* The image used */
-	background-image:
-		url("https://c4.wallpaperflare.com/wallpaper/51/441/142/closeup-plants-sunlight-leaves-wallpaper-a806cd5850b01c98f01c115e28a2745a.jpg");
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("https://c4.wallpaperflare.com/wallpaper/51/441/142/closeup-plants-sunlight-leaves-wallpaper-a806cd5850b01c98f01c115e28a2745a.jpg");
 	/* Full height */
 	height: 100%;
 	/* Center and scale the image nicely */
@@ -63,11 +58,6 @@ body, html {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-attachment: fixed;
+	
 }
 
-.content {
-	background: rgba(0, 0, 0, 0.2);
-	color: white;
-	height: inherit;
-	padding-left: 10px;
-}

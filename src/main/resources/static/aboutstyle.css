@@ -1,20 +1,59 @@
 @charset "ISO-8859-1";
 
-.title {
-	font-size: 7em;
-    font-family: "PT Serif";
-    float:center;
-    text-align: center;
-    margin-top: 9px;
-    padding-right: 2px;
+body {
+	/* The image used */
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("https://www.barraques.cat/pngfile/big/32-322680_plant-aesthetic-desktop-wallpaper-hd-plant.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
 }
 
-p {
-   
-    font-size: 1.5em;
-    font-family: "PT Serif";
-    float:left;
-    margin-top: 9px;
-    padding-right: 8px;
-    text-align: justify;
+.content {
+	font-family: "PT Serif";
+}
+
+.title {
+	font-size: 7em;
+	float: center;
+	text-align: center;
+	margin-top: 9px;
+	padding-right: 2px;
+	color: white;
+	text-decoration: underline;
+	
+}
+
+.container {
+	font-size: 1.3em;
+	float: center;
+	margin-top: 9px;
+	padding-right: 8px;
+	text-align: justify;
+	color: white;
+}
+
+.separate {
+	text-align: center;
+}
+
+.orangelink {
+	color: #f47c3c;	
+	text-shadow: .5px 2px #0d0d0d;
+}
+
+.linkylink {
+	text-shadow: .25px 2px #0d0d0d;
+}
+
+.inlinecards {
+	margin-left: auto;
+    margin-right: auto;
+    width: 20em;
 }

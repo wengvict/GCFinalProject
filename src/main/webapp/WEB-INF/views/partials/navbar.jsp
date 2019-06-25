@@ -23,6 +23,8 @@
 						Search</a></li>
 				<li class="nav-item"><a class="nav-link" href="/about">About</a>
 				</li>
+				<li class="nav-item"><a class="nav-link" href="/inventorylogin">Login</a>
+				</li>
 				<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
 				</li>
 			</ul>
