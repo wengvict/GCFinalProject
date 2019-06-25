@@ -33,41 +33,36 @@
 				for water, soil pH, light, root depth, etc. If thorough data is not
 				a concern, we have information on over 92,000 species. We also cover
 				450 species of common plants that are unsafe for pet consumption and
-				cause behind it. Additionally, we encourage our users to aid in
+				the cause behind it. Additionally, we encourage our users to aid in
 				making our planet a greener place as well as helping our urban
 				neighbors in need of leafy greens. For more information, see the
-				cards below on
-				<bold>We Love the Earth</bold>
-				and
-				<bold>The Michigan Urban Farming Initiative</bold>
-				. Let's shed light on plant, pet, and human lives together. <br>
-				<br>
+				cards below. Let's shed light on plant, pet, and human lives
+				together. <br> <br>
 			<div class="separate">🌱 🌱 🌱</div>
 			<br>
 
 
 			<div class="title">
 				<h3>
-					Our Sources 
-					<br>
+					Our Sources<br>
 				</h3>
 			</div>
-			
+
 			<h3>
 				<center>
 					<a href="https://trefle.io/" class="linkylink">Trefle</a>, <a
 						href="https://plantsdb.xyz/heartbeat" class="linkylink">PlantsDB</a>,
 					<a href="https://plants.sc.egov.usda.gov/java/" class="linkylink">USDA
 						National Resources Conservation Service</a>, <a
-						href="https://www.aspca.org/">ASPCA</a>
+						href="https://www.aspca.org/" class="linkylink">ASPCA</a>
 				</center>
 			</h3>
 			<br>
 			<div class="separate">🌱 🌱 🌱</div>
 			<br>
 			<div class="title">
-				<h3>Giving Back
-				<br>
+				<h3>
+					Giving Back<br>
 				</h3>
 			</div>
 		</div>
