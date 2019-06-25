@@ -43,12 +43,12 @@
 					</label>
 				</div>
 
-				
+
 				<div class="form-inline" align="center">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons"
 						bis_skin_checked="1">
-						<label class="btn btn-info"> <input
-							type="checkbox" name=""> Low Sunlight
+						<label class="btn btn-info"> <input type="checkbox"
+							name=""> Low Sunlight
 						</label> <label class="btn btn-info"> <input type="checkbox"
 							name=""> Med Sunlight
 						</label> <label class="btn btn-info"> <input type="checkbox"
@@ -56,11 +56,11 @@
 						</label>
 					</div>
 				</div>
-				<div class="form-inline" align="right">
+			</div>
+			<br>
 				<input class="btn btn-warning btn-lg" type="submit"
 					value="Find My Plant">
-					</div>
-			</div>
+			
 
 		</form>
 	</div>
