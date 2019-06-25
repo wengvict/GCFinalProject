@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+
+.title {
+	font-size: 7em;
+    font-family: "PT Serif";
+    float:center;
+    text-align: center;
+    margin-top: 9px;
+    padding-right: 2px;
+}
+
+p {
+   
+    font-size: 1.5em;
+    font-family: "PT Serif";
+    float:left;
+    margin-top: 9px;
+    padding-right: 8px;
+    text-align: justify;
+}

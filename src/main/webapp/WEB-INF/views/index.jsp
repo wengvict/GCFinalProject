@@ -37,11 +37,13 @@
 			</div>
 			<br>
 			<div class="homemiddleblurb3">
-			Begin by using the search bar in the top right and select whether you are using a scientific or common name
+			Begin by using the search bar in the top right and select whether you are using a scientific or common name.
+			<br>
+			If you already have a plant at home, simply add it to your garden on our app and we'll send you reminders to water it.
 			</div>
 			<br>
-			<div class="homemiddleblurb2">-or-</div>
-			<div class="homemiddleblurb3"><a href="/toxicitypage" class="indexlink">search our list of toxic plants</a> to make sure your new plant won't harm your furbabies. </div>
+			<div class="homemiddleblurb2">🌿 or 🌵</div>
+			<div class="homemiddleblurb3"><a href="/toxicitypage" class="indexlink">Search our list of toxic plants</a> to make sure your new plant won't harm your furbabies. </div>
 			<br>
 			<div class="petlivesmatter">#petlivesmatter</div>
 

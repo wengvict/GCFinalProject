@@ -2,6 +2,10 @@
 	height: 9em;
 }
 
+.content {
+	font-family: "PT Serif";
+}
+
 .homemiddleblurb {
 	font-size: 4em;
 	width: 100%;
@@ -17,7 +21,7 @@
 }
 
 .homemiddleblurb3 {
-	font-size: 1.5em;
+	font-size: 1.7em;
 	width: 100%;
 	text-align: center;
 	padding-top: -10px;
@@ -36,7 +40,7 @@
 	font-size: 2em;
 	width: 100%;
 	text-align: center;
-	text-shadow: 1px .5px #0d0d0d;
+	text-shadow: .5px .5px #0d0d0d;
 	padding-top: -10px;
 	color: #f47c3c;
 }

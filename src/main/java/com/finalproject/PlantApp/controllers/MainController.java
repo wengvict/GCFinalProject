@@ -16,6 +16,11 @@ public class MainController {
 	public ModelAndView searchPage() {
 		return new ModelAndView("searchpage");
 	}
+	
+	@RequestMapping("/about") 
+	public ModelAndView aboutPage() {
+		return new ModelAndView("/about");
+	}
 
 
 }
