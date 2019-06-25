@@ -3,6 +3,8 @@ package com.finalproject.PlantApp.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.finalproject.PlantApp.apiservices.TrefleService;
 import com.finalproject.PlantApp.entity.PlantInventory;
+import com.finalproject.PlantApp.entity.User;
 import com.finalproject.PlantApp.repository.PlantInventoryRepo;
 import com.finalproject.PlantApp.trefle.pojos.PlantPics;
 import com.finalproject.PlantApp.trefle.pojos.TrefleOuter;
@@ -133,13 +136,20 @@ public class SearchController {
 	}
 
 	@RequestMapping("/addplant")
-	public ModelAndView addPlant(@RequestParam("scientificname") String scientificname) {
-		PlantInventory addplant = new PlantInventory(scientificname, null, null, null, null, null);
-		pir.save(addplant);
+	public ModelAndView addPlant(HttpSession session, @RequestParam("scientificname") String scientificname) {
+		User user = (User) session.getAttribute("user");
+		if(user == null) {
+			
+			return new ModelAndView("userlogin", "pName", scientificname);
+		}else {
+			PlantInventory addplant = new PlantInventory(scientificname, null, null, null, null, null, user.getUserId());
+			pir.save(addplant);
 
-		// this saves plant but we will have to work on showing the results table with
-		// the expressions language tag
-		return new ModelAndView("redirect:/inventory", "addconfirm", "Plant has been added!");
+			// this saves plant but we will have to work on showing the results table with
+			// the expressions language tag
+			return new ModelAndView("redirect:/inventory", "addconfirm", "Plant has been added!");
+		}
+		
 	}
 
 }

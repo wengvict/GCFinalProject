@@ -27,6 +27,8 @@ public class PlantInventory {
 	private String nextDateFormatted;
 	@Column(name="needswater")
 	private Integer needsWater;
+	@Column(name="userid")
+	private String userId;
 	
 	
 	public PlantInventory() {
@@ -34,8 +36,9 @@ public class PlantInventory {
 	}
 	
 	
+	
 	public PlantInventory(Integer id, String plantname, LocalDateTime waterdate, String formattedDate,
-			LocalDateTime nextWaterDate, String nextDateFormatted, Integer needsWater) {
+			LocalDateTime nextWaterDate, String nextDateFormatted, Integer needsWater, String userId) {
 		super();
 		this.id = id;
 		this.plantname = plantname;
@@ -44,16 +47,17 @@ public class PlantInventory {
 		this.nextWaterDate = nextWaterDate;
 		this.nextDateFormatted = nextDateFormatted;
 		this.needsWater = needsWater;
+		this.userId = userId;
 	}
-	
 	public PlantInventory(String plantname, LocalDateTime waterdate, String formattedDate,
-			LocalDateTime nextWaterDate, String nextDateFormatted, Integer needsWater) {
+			LocalDateTime nextWaterDate, String nextDateFormatted, Integer needsWater, String userId) {
 		this.plantname = plantname;
 		this.waterdate = waterdate;
 		this.formattedDate = formattedDate;
 		this.nextWaterDate = nextWaterDate;
 		this.nextDateFormatted = nextDateFormatted;
 		this.needsWater = needsWater;
+		this.userId = userId;
 	}
 
 

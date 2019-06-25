@@ -17,11 +17,13 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="/">Home </a></li>
 				<li class="nav-item"><a class="nav-link" href="/toxicitypage">List of Toxic Plants</a></li>
-				<li class="nav-item"><a class="nav-link" href="/inventory">Garden
+				<li class="nav-item"><a class="nav-link" href="/inventorylogin">Garden
 						Inventory</a></li>
 				<li class="nav-item"><a class="nav-link" href="/search">Advanced
 						Search</a></li>
 				<li class="nav-item"><a class="nav-link" href="/about">About</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="findplants">

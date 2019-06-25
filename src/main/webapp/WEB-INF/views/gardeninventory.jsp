@@ -36,11 +36,15 @@
 <td>${ t.plantname }</td>
 
 <td><a href="water?id=${ t.id }" class="btn btn-info"> Water</a>
-<br>
-<a href="manualwater?id=${ t.id }" class="btn btn-info">Add date manually</a>
 </td>
-<td><span id="fuckjs" class="fuckjs">${ t.formattedDate }</span></td>
-<td>${ t.nextDateFormatted }</td>
+<td>${ t.formattedDate }
+<br>
+<a href="manualwater?future=0&id=${ t.id }" class="btn btn-info">Add date manually</a>
+</td>
+<td>${ t.nextDateFormatted }
+<br>
+<a href="manualwater?future=1&id=${ t.id }" class="btn btn-info">Add date manually</a>
+</td>
 <td><a href="removeplant?id=${ t.id }" class="btn btn-danger">Delete</a></td>
 </tr>
 </c:forEach>

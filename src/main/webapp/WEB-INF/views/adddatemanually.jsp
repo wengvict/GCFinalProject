@@ -24,6 +24,7 @@
   <label class="col-form-label col-form-label-lg" for="waterdate">${ plant.plantname }</label>
   <br>
 <input type="hidden" name="id" value="${ plant.id }" id="waterdate">
+<input type="hidden" name="future" value="${ future }">
  <input class="form-control form-control-lg" type="date" placeholder=".form-control-lg" id="inputLarge" name="waterdate">
 <br>
 <input type="submit" value="Add Date" class="btn btn-info">
