@@ -49,9 +49,10 @@
 			<div class="title">
 				<h3>
 					Our Sources 
+					<br>
 				</h3>
 			</div>
-			<br>
+			
 			<h3>
 				<center>
 					<a href="https://trefle.io/" class="linkylink">Trefle</a>, <a
@@ -65,7 +66,9 @@
 			<div class="separate">🌱 🌱 🌱</div>
 			<br>
 			<div class="title">
-				<h3>Giving Back</h3>
+				<h3>Giving Back
+				<br>
+				</h3>
 			</div>
 		</div>
 
