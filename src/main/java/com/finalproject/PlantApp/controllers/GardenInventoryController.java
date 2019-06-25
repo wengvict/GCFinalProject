@@ -51,6 +51,14 @@ public class GardenInventoryController {
 			return new ModelAndView("redirect:/inventory");
 		}
 	}
+	
+	@RequestMapping("/addplantfrominventory")
+	public ModelAndView addPlant(HttpSession session, @RequestParam("plantname") String name) {
+		User user = (User) session.getAttribute("user");
+		PlantInventory addplant = new PlantInventory(name, null, null, null, null, null, user.getUserId());
+		pir.save(addplant);
+		return new ModelAndView("redirect:/inventory");
+	}
 
 	@RequestMapping("/createuser")
 	public ModelAndView createUser(HttpSession session, @RequestParam("userid") String id,

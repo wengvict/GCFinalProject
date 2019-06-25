@@ -50,8 +50,11 @@
 </c:forEach>
 </tbody>
 </table>
-
-<script src="/water.js"></script>
+<br>
+<form action="addplantfrominventory">
+Plant Name: <input type=text name=plantname>
+<input type="submit" value="add">
+</form>
 
 
 

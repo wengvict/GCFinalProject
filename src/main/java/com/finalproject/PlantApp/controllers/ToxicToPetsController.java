@@ -1,6 +1,7 @@
 package com.finalproject.PlantApp.controllers;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -108,7 +109,7 @@ public class ToxicToPetsController {
 			
 
 		}
-		System.out.println(poisonList);
+		poisonList.sort(Comparator.comparing(PoisonToPets::getCommonname));
 		mv.addObject("plantlist", poisonList);
 		return mv;
 	}
