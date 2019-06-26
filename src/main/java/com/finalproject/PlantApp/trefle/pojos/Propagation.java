@@ -5,92 +5,113 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Propagation {
 	
-	private String tubers;
-	private String sprigs;
-	private String sod;
-	private String seed;
-	private String cuttings;
-	private String corms;
-	private String container;
-	private String bulbs;
-	private String bare_root;
-	public String getTubers() {
-		return tubers;
-	}
-	public void setTubers(String tubers) {
-		this.tubers = tubers;
-	}
-	public String getSprigs() {
-		return sprigs;
-	}
-	public void setSprigs(String sprigs) {
-		this.sprigs = sprigs;
-	}
-	public String getSod() {
-		return sod;
-	}
-	public void setSod(String sod) {
-		this.sod = sod;
-	}
-	public String getSeed() {
-		return seed;
-	}
-	public void setSeed(String seed) {
-		this.seed = seed;
-	}
-	public String getCuttings() {
-		return cuttings;
-	}
-	public void setCuttings(String cuttings) {
-		this.cuttings = cuttings;
-	}
-	public String getCorms() {
-		return corms;
-	}
-	public void setCorms(String corms) {
-		this.corms = corms;
-	}
-	public String getContainer() {
-		return container;
-	}
-	public void setContainer(String container) {
-		this.container = container;
-	}
-	public String getBulbs() {
-		return bulbs;
-	}
-	public void setBulbs(String bulbs) {
-		this.bulbs = bulbs;
-	}
-	public String getBare_root() {
-		return bare_root;
-	}
-	public void setBare_root(String bare_root) {
-		this.bare_root = bare_root;
-	}
-	public Propagation(String tubers, String sprigs, String sod, String seed, String cuttings, String corms,
-			String container, String bulbs, String bare_root) {
-		super();
-		this.tubers = tubers;
-		this.sprigs = sprigs;
-		this.sod = sod;
-		this.seed = seed;
-		this.cuttings = cuttings;
-		this.corms = corms;
-		this.container = container;
-		this.bulbs = bulbs;
-		this.bare_root = bare_root;
-	}
+	private boolean tubers;
+	private boolean sprigs;
+	private boolean sod;
+	private boolean seed;
+	private boolean cuttings;
+	private boolean corms;
+	private boolean container;
+	private boolean bulbs;
+	private boolean bare_root;
+	
 	public Propagation() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	public Propagation(boolean tubers, boolean sprigs, boolean sod, boolean seed, boolean cuttings, boolean corms,
+			boolean container, boolean bulbs, boolean bare_root) {
+		super();
+		this.tubers = tubers;
+		this.sprigs = sprigs;
+		this.sod = sod;
+		this.seed = seed;
+		this.cuttings = cuttings;
+		this.corms = corms;
+		this.container = container;
+		this.bulbs = bulbs;
+		this.bare_root = bare_root;
+	}
+
+	public boolean isTubers() {
+		return tubers;
+	}
+
+	public void setTubers(boolean tubers) {
+		this.tubers = tubers;
+	}
+
+	public boolean isSprigs() {
+		return sprigs;
+	}
+
+	public void setSprigs(boolean sprigs) {
+		this.sprigs = sprigs;
+	}
+
+	public boolean isSod() {
+		return sod;
+	}
+
+	public void setSod(boolean sod) {
+		this.sod = sod;
+	}
+
+	public boolean isSeed() {
+		return seed;
+	}
+
+	public void setSeed(boolean seed) {
+		this.seed = seed;
+	}
+
+	public boolean isCuttings() {
+		return cuttings;
+	}
+
+	public void setCuttings(boolean cuttings) {
+		this.cuttings = cuttings;
+	}
+
+	public boolean isCorms() {
+		return corms;
+	}
+
+	public void setCorms(boolean corms) {
+		this.corms = corms;
+	}
+
+	public boolean isContainer() {
+		return container;
+	}
+
+	public void setContainer(boolean container) {
+		this.container = container;
+	}
+
+	public boolean isBulbs() {
+		return bulbs;
+	}
+
+	public void setBulbs(boolean bulbs) {
+		this.bulbs = bulbs;
+	}
+
+	public boolean isBare_root() {
+		return bare_root;
+	}
+
+	public void setBare_root(boolean bare_root) {
+		this.bare_root = bare_root;
+	}
+
 	@Override
 	public String toString() {
 		return "Propagation [tubers=" + tubers + ", sprigs=" + sprigs + ", sod=" + sod + ", seed=" + seed
 				+ ", cuttings=" + cuttings + ", corms=" + corms + ", container=" + container + ", bulbs=" + bulbs
 				+ ", bare_root=" + bare_root + "]";
 	}
+	
 	
 
 }

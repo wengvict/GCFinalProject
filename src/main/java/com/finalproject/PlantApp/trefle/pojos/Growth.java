@@ -11,7 +11,7 @@ public class Growth {
 	private String drought_tolerance;
 	private String fertility_requirement;
 	private String fire_tolerance;
-	private String frost_free_days_minimum;
+	private Integer frost_free_days_minimum;
 	private String hedge_tolerance;
 	private String moisture_use;
 	private Double ph_maximum;
@@ -32,7 +32,7 @@ public class Growth {
 
 	public Growth(String anaerobic_tolerance, String caco_3_tolerance, String cold_stratification_required,
 			String drought_tolerance, String fertility_requirement, String fire_tolerance,
-			String frost_free_days_minimum, String hedge_tolerance, String moisture_use, Double ph_maximum,
+			Integer frost_free_days_minimum, String hedge_tolerance, String moisture_use, Double ph_maximum,
 			Double ph_minimum, Planting_density_maximum planting_density_maximum,
 			Planting_density_minimum planting_density_minimum, Precipitation_maximum precipitation_maximum,
 			Precipitation_minimum precipitation_minimum, String resprout_ability, Root_depth_minimum root_depth_minimum,
@@ -108,11 +108,11 @@ public class Growth {
 		this.fire_tolerance = fire_tolerance;
 	}
 
-	public String getFrost_free_days_minimum() {
+	public Integer getFrost_free_days_minimum() {
 		return frost_free_days_minimum;
 	}
 
-	public void setFrost_free_days_minimum(String frost_free_days_minimum) {
+	public void setFrost_free_days_minimum(Integer frost_free_days_minimum) {
 		this.frost_free_days_minimum = frost_free_days_minimum;
 	}
 
@@ -233,7 +233,7 @@ public class Growth {
 				+ ", root_depth_minimum=" + root_depth_minimum + ", salinity_tolerance=" + salinity_tolerance
 				+ ", shade_tolerance=" + shade_tolerance + ", temperature_minimum=" + temperature_minimum + "]";
 	}
-	
+
 	
 
 }

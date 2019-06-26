@@ -12,7 +12,7 @@ public class USDAPlant {
 	private String familyCommonName;
 	@JsonProperty("Category")
 	private String category;
-	@JsonProperty("Class")
+	@JsonProperty("TrefleClass")
 	private String plantclass;
 	@JsonProperty("Scientific_Name_x")
 	private String scientificName;

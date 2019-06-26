@@ -8,18 +8,18 @@ public class Foliage {
 	private String texture;
 	private String porosity_winter;
 	private String porosity_summer;
-	private String foliageColor;
+	private String color;
 	
 	public Foliage() {
 		super();
 	}
 
-	public Foliage(String texture, String porosity_winter, String porosity_summer, String foliageColor) {
+	public Foliage(String texture, String porosity_winter, String porosity_summer, String color) {
 		super();
 		this.texture = texture;
 		this.porosity_winter = porosity_winter;
 		this.porosity_summer = porosity_summer;
-		this.foliageColor = foliageColor;
+		this.color = color;
 	}
 
 	public String getTexture() {
@@ -46,20 +46,20 @@ public class Foliage {
 		this.porosity_summer = porosity_summer;
 	}
 
-	public String getFoliageColor() {
-		return foliageColor;
+	public String getColor() {
+		return color;
 	}
 
-	public void setFoliageColor(String foliageColor) {
-		this.foliageColor = foliageColor;
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	@Override
 	public String toString() {
 		return "Foliage [texture=" + texture + ", porosity_winter=" + porosity_winter + ", porosity_summer="
-				+ porosity_summer + ", foliageColor=" + foliageColor + "]";
+				+ porosity_summer + ", color=" + color + "]";
 	}
-	
+
 	
 
 }

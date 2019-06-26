@@ -3,18 +3,18 @@ package com.finalproject.PlantApp.trefle.pojos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Class {
+public class TrefleClass {
 	
 	private Integer id;
 	private String link;
 	private String name;
 	private String slug;
 	
-	public Class() {
+	public TrefleClass() {
 		super();
 	}
 
-	public Class(Integer id, String link, String name, String slug) {
+	public TrefleClass(Integer id, String link, String name, String slug) {
 		super();
 		this.id = id;
 		this.link = link;
@@ -56,7 +56,7 @@ public class Class {
 
 	@Override
 	public String toString() {
-		return "Class [id=" + id + ", link=" + link + ", name=" + name + ", slug=" + slug + "]";
+		return "TrefleClass [id=" + id + ", link=" + link + ", name=" + name + ", slug=" + slug + "]";
 	}
 	
 	

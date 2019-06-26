@@ -5,31 +5,39 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Precipitation_maximum {
 
-	private Long inches;
-	private Long cm;
-	public Long getInches() {
-		return inches;
-	}
-	public void setInches(Long inches) {
-		this.inches = inches;
-	}
-	public Long getCm() {
-		return cm;
-	}
-	public void setCm(Long cm) {
-		this.cm = cm;
-	}
-	public Precipitation_maximum(Long inches, Long cm) {
-		super();
-		this.inches = inches;
-		this.cm = cm;
-	}
+	private Double inches;
+	private Double cm;
+	
 	public Precipitation_maximum() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	public Precipitation_maximum(Double inches, Double cm) {
+		super();
+		this.inches = inches;
+		this.cm = cm;
+	}
+
+	public Double getInches() {
+		return inches;
+	}
+
+	public void setInches(Double inches) {
+		this.inches = inches;
+	}
+
+	public Double getCm() {
+		return cm;
+	}
+
+	public void setCm(Double cm) {
+		this.cm = cm;
+	}
+
 	@Override
 	public String toString() {
-		return "precipitation_maximum [inches=" + inches + ", cm=" + cm + "]";
+		return "Precipitation_maximum [inches=" + inches + ", cm=" + cm + "]";
 	}
+	
+	
 }

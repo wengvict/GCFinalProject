@@ -5,24 +5,24 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Flower {
 	
-	private String conspicuous;
+	private boolean conspicuous;
 	private String color;
 	
 	public Flower() {
 		super();
 	}
 
-	public Flower(String conspicuous, String color) {
+	public Flower(boolean conspicuous, String color) {
 		super();
 		this.conspicuous = conspicuous;
 		this.color = color;
 	}
 
-	public String getConspicuous() {
+	public boolean isConspicuous() {
 		return conspicuous;
 	}
 
-	public void setConspicuous(String conspicuous) {
+	public void setConspicuous(boolean conspicuous) {
 		this.conspicuous = conspicuous;
 	}
 
@@ -38,7 +38,7 @@ public class Flower {
 	public String toString() {
 		return "Flower [conspicuous=" + conspicuous + ", color=" + color + "]";
 	}
-	
+
 	
 
 }

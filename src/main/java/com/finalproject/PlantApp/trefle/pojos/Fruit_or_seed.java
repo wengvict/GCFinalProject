@@ -5,19 +5,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Fruit_or_seed {
 	
-	private String seed_persistence;
+	private boolean seed_persistence;
 	private String seed_period_end;
 	private String seed_period_begin;
 	private String seed_abundance;
-	private String conspicuous;
+	private boolean conspicuous;
 	private String color;
 	
 	public Fruit_or_seed() {
 		super();
 	}
 
-	public Fruit_or_seed(String seed_persistence, String seed_period_end, String seed_period_begin, String seed_abundance,
-			String conspicuous, String color) {
+	public Fruit_or_seed(boolean seed_persistence, String seed_period_end, String seed_period_begin,
+			String seed_abundance, boolean conspicuous, String color) {
 		super();
 		this.seed_persistence = seed_persistence;
 		this.seed_period_end = seed_period_end;
@@ -27,11 +27,11 @@ public class Fruit_or_seed {
 		this.color = color;
 	}
 
-	public String getSeed_persistence() {
+	public boolean isSeed_persistence() {
 		return seed_persistence;
 	}
 
-	public void setSeed_persistence(String seed_persistence) {
+	public void setSeed_persistence(boolean seed_persistence) {
 		this.seed_persistence = seed_persistence;
 	}
 
@@ -59,11 +59,11 @@ public class Fruit_or_seed {
 		this.seed_abundance = seed_abundance;
 	}
 
-	public String getConspicuous() {
+	public boolean isConspicuous() {
 		return conspicuous;
 	}
 
-	public void setConspicuous(String conspicuous) {
+	public void setConspicuous(boolean conspicuous) {
 		this.conspicuous = conspicuous;
 	}
 
@@ -81,7 +81,7 @@ public class Fruit_or_seed {
 				+ ", seed_period_begin=" + seed_period_begin + ", seed_abundance=" + seed_abundance + ", conspicuous="
 				+ conspicuous + ", color=" + color + "]";
 	}
-	
+
 	
 
 }

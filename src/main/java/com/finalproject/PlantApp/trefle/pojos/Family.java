@@ -24,6 +24,46 @@ public class Family {
 		this.slug = slug;
 	}
 
+	public String getCommon_name() {
+		return common_name;
+	}
+
+	public void setCommon_name(String common_name) {
+		this.common_name = common_name;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSlug() {
+		return slug;
+	}
+
+	public void setSlug(String slug) {
+		this.slug = slug;
+	}
+
 	@Override
 	public String toString() {
 		return "Family [common_name=" + common_name + ", id=" + id + ", link=" + link + ", name=" + name + ", slug="

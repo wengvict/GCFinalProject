@@ -17,15 +17,52 @@
 
 <%@ include file="partials/navbar.jsp"%>
 
+<h5>General Plant Facts</h5>
 Scientific name: ${plantfacts.scientific_name }
+<br>
+
+Common name: ${plantfacts.common_name }
+<br>
+Family common name: ${plantfacts.family_common_name }
 <br>
 Genus: ${plantfacts.genus.name }
 <br>
-Division: ${plantfacts.division.name }
+Duration: ${plantfacts.duration }
 <br>
-Toxic to cats: ${toxic }
+<br>
+
+<h5>Foliage Facts</h5>
+Foliage color: ${plantfacts.main_species.foliage.color }
+<br>
+Foliage texture: ${plantfacts.main_species.foliage.texture }
+<br>
+<br>
+
+<h5>Flower Facts</h5>
+Flower color: ${plantfacts.main_species.flower.color }
+<br>
+Is the flower conspicuous? ${plantfacts.main_species.flower.conspicuous }
+<br>
+<br>
+
+<h5>Fruit and Seed Facts</h5>
+Seed color: ${plantfacts.main_species.fruit_or_seed.color }
+<br>
+Seed period begins in: ${plantfacts.main_species.fruit_or_seed.seed_period_begin }
+<br>
+Seed period begins in: ${plantfacts.main_species.fruit_or_seed.seed_period_end }
+<br>
+<br>
 
 
+<h5>Soil Types ${plantfacts.scientific_name } Grows In</h5>
+Fine soil: ${plantfacts.main_species.soils_adaptation.fine }
+<br>
+Medium soil: ${plantfacts.main_species.soils_adaptation.medium }
+<br> 
+Coarse soil: ${plantfacts.main_species.soils_adaptation.coarse }
+<br>
+<br>
 
 
 

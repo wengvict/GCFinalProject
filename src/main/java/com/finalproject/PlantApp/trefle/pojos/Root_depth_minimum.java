@@ -5,29 +5,35 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Root_depth_minimum {
 
-	private Long inches;
-	private Long cm;
-	public Long getInches() {
-		return inches;
-	}
-	public void setInches(Long inches) {
-		this.inches = inches;
-	}
-	public Long getCm() {
-		return cm;
-	}
-	public void setCm(Long cm) {
-		this.cm = cm;
-	}
-	public Root_depth_minimum(Long inches, Long cm) {
-		super();
-		this.inches = inches;
-		this.cm = cm;
-	}
+	private Double inches;
+	private Double cm;
+	
 	public Root_depth_minimum() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	public Root_depth_minimum(Double inches, Double cm) {
+		super();
+		this.inches = inches;
+		this.cm = cm;
+	}
+
+	public Double getInches() {
+		return inches;
+	}
+
+	public void setInches(Double inches) {
+		this.inches = inches;
+	}
+
+	public Double getCm() {
+		return cm;
+	}
+
+	public void setCm(Double cm) {
+		this.cm = cm;
+	}
+
 	@Override
 	public String toString() {
 		return "Root_depth_minimum [inches=" + inches + ", cm=" + cm + "]";
