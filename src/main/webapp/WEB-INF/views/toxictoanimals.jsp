@@ -5,19 +5,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" href="pettox.css">
 <link
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA"
 	crossorigin="anonymous">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Plants Toxic to Pets</title>
 </head>
 <body>
 
 <%@ include file="partials/navbar.jsp"%>
+
+
 <h1>Pets Lives Matter</h1>
+<div class="container">
 <form action="/searchtoxstring">
 Search by name: <input type="text" name="toxstring" placeholder="Try 'aloe'"> 
 <input type="submit" value="Pet Lives Matter">
@@ -38,6 +41,9 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
 </form>
 
 
+
+</div>
+<div align="center">
 
  
 <h3>Toxic Archive</h3>
@@ -71,6 +77,7 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
         </tbody>
 
     </table>
+   
     <a class="btn btn-primary" href="/toxicitypagenext?counterend=${counterend}">NEXT PAGE</a><br>
     <a class="btn btn-primary" href="/toxicitypageletter?letter=a">A</a>
     <a class="btn btn-primary" href="/toxicitypageletter?letter=b">B</a>
@@ -97,7 +104,7 @@ Horse<input type="checkbox" name="horse" value="horse"><br>
     <a class="btn btn-primary" href="/toxicitypageletter?letter=x">X</a>
     <a class="btn btn-primary" href="/toxicitypageletter?letter=y">Y</a>
     <a class="btn btn-primary" href="/toxicitypageletter?letter=z">Z</a>
-
+</div>
   
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

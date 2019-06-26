@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+
+body {
+	/* The image used */
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("https://images.unsplash.com/photo-1500023721469-5f8532dce827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+}
+
+.content {
+	font-family: "PT Serif";
+}
+
+.title {
+	
+    left: 0;
+    line-height: 150px;
+    margin: auto;
+    margin-top: -50px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+
+	font-size: 7em;
+	float: center;
+	text-align: center;
+	margin-top: 9px;
+	padding-right: 2px;
+	color: white;
+	
+	
+}
+h1{
+	text-align:center;
+	color:white;
+}
+
+h3{
+	text-align:center;
+	color:white;
+}
+h5{
+	text-align:center;
+	color:white;
+	
+}
+
+td{
+	color:white;
+}
+.container {
+
+	font-size: 1.5em;
+	float: center;
+	text-align: center;
+	color: white;
+	margin-top: 55px;
+	top: 50%;
+	width: 100%;
+	
+}
+
+.separate {
+	align: center;
+}
+
+.orangelink {
+	color: #f47c3c;	
+	text-shadow: .5px 2px #0d0d0d;
+}
+
+.linkylink {
+	text-shadow: .25px 2px #0d0d0d;
+}
+
+
