@@ -20,12 +20,19 @@
 <h5>General Plant Facts</h5>
 Scientific name: ${plantfacts.scientific_name }
 <br>
-
 Common name: ${plantfacts.common_name }
+<br>
+<br>
+Phyla name: ${plantfacts.division.name }
+<br>
+Order name: ${plantfacts.order.name }
+<br>
+Family scientific name: ${plantfacts.family.name }
 <br>
 Family common name: ${plantfacts.family_common_name }
 <br>
-Genus: ${plantfacts.genus.name }
+Genus name: ${plantfacts.genus.name }
+<br>
 <br>
 Duration: ${plantfacts.duration }
 <br>
@@ -54,8 +61,34 @@ Seed period begins in: ${plantfacts.main_species.fruit_or_seed.seed_period_end }
 <br>
 <br>
 
+<h5>Horticultural Requirements</h5>
+Anaerobic Tolerance: ${plantfacts.main_species.growth.anaerobic_tolerance }
+<br>
 
-<h5>Soil Types ${plantfacts.scientific_name } Grows In</h5>
+
+Drought tolerance: ${plantfacts.main_species.growth.drought_tolerance }
+<br>
+Fertility requirements: ${plantfacts.main_species.growth.fertility_requirement }
+<br>
+Fire tolerance: ${plantfacts.main_species.growth.fire_tolerance }
+<br>
+Minimum frost-free days: ${plantfacts.main_species.growth.frost_free_days_minimum }
+<br>
+Hedge tolerance: ${plantfacts.main_species.growth.hedge_tolerance }
+<br>
+Minimum soil pH: ${plantfacts.main_species.growth.ph_minimum }
+<br>
+Maximum soil pH: ${plantfacts.main_species.growth.ph_maximum }
+<br>
+Soil salinity tolerance: ${plantfacts.main_species.growth.salinity_tolerance }
+<br>
+Shade tolerance: ${plantfacts.main_species.growth.shade_tolerance }
+<br>
+Root depth minimum: ${plantfacts.main_species.growth.root_depth_minimum.inches } inches, or ${plantfacts.main_species.growth.root_depth_minimum.cm } centimeters
+<br>
+Temperature minimum: ${plantfacts.main_species.growth.temperature_minimum.deg_f } Fahrenheit, or ${plantfacts.main_species.growth.temperature_minimum.deg_c } Celsius
+<br><br>
+<h6>Soil Type Tolerance</h6>
 Fine soil: ${plantfacts.main_species.soils_adaptation.fine }
 <br>
 Medium soil: ${plantfacts.main_species.soils_adaptation.medium }
