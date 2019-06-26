@@ -4,12 +4,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="byletter.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Results By Letter</title>
 </head>
 <body>
+<%@ include file="partials/navbar.jsp"%>
 
-
+<div class="container">
     <table>
 
         <thead>
@@ -39,6 +46,7 @@
         </tbody>
 
     </table>
+</div>
 
 </body>
 </html>
