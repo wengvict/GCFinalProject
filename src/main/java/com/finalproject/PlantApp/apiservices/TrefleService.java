@@ -22,8 +22,7 @@ public class TrefleService {
 
 	public static ResponseEntity<TreflePlant[]> getTreflePlantArray(String plantname, String token) {
 
-		// per page at end is not necessary, but might be to have api search through api
-		// pages
+		
 		String plUrl = "https://trefle.io/api/plants?q=" + plantname + "&token=" + token;
 
 		ResponseEntity<TreflePlant[]> getPlant = rt.getForEntity(plUrl, TreflePlant[].class);
@@ -32,8 +31,7 @@ public class TrefleService {
 	
 	public static ResponseEntity<TreflePlant[]> getTreflePlantArrayByPages(String plantname, String token, int pages) {
 
-		// per page at end is not necessary, but might be to have api search through api
-		// pages
+	
 		String plUrl = "https://trefle.io/api/plants?page=" + pages + "&q=" + plantname + "&token=" + token;
 
 		ResponseEntity<TreflePlant[]> getPlant = rt.getForEntity(plUrl, TreflePlant[].class);
