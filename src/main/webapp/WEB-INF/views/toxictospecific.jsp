@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-     <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-    
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,42 +11,44 @@
 	integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA"
 	crossorigin="anonymous">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Toxic Search Result || Plantopedia</title>
 </head>
 <body>
-<%@ include file="partials/navbar.jsp"%>
-hey animalss
+	<%@ include file="partials/navbar.jsp"%>
 
-<table>
+	<br>
+	<h5>Toxic plant search results for "${ userstring }".</h5>
 
-        <thead>
+	<table class="table table-hover">
 
-            <tr>
+		<thead>
 
-               <td>Name</td>
+			<tr class="table-success">
 
-            </tr>
+				<td>Name</td>
 
-        </thead>
+			</tr>
 
-        <tbody>
+		</thead>
 
-            <c:forEach items="${plantsearch }" var="toxplant">
+		<tbody>
 
-                <tr>
+			<c:forEach items="${plantsearch }" var="toxplant">
 
-                    <td><a href="/toxicdetails?id=${toxplant.id }">${toxplant.commonname}</a></td>
+				<tr>
 
-                 
+					<td><a href="/toxicdetails?id=${toxplant.id }">${toxplant.commonname}</a></td>
 
-                </tr>
 
-            </c:forEach>
 
-        </tbody>
+				</tr>
 
-    </table>
-    
-    
+			</c:forEach>
+
+		</tbody>
+
+	</table>
+
+
 </body>
 </html>

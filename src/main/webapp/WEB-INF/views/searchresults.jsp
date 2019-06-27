@@ -12,12 +12,15 @@
 	crossorigin="anonymous">
 
 <meta charset="ISO-8859-1">
-<title>Results for ${ search }</title>
+<title>Search Result || Plantopedia</title>
 </head>
 <body>
 
 	<%@ include file="partials/navbar.jsp"%>
-
+	
+	<br>
+	<h5>Results for "${ search }".</h5>
+	<h5>Please note that data for some species may be incomplete. </h5>
 
 	${addconfirm }
 	<table class="table table-hover">
@@ -56,10 +59,10 @@
 		</tbody>
 	</table>
 
-
+<!--  
 	<a href="allthethings?name=${ search }" class="btn btn-primary btn-lg">I
 		don't care about complete data</a>
-
+ -->
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

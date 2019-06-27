@@ -117,6 +117,10 @@ public class ToxicToPetsController {
 	@RequestMapping("/searchtoxstring")
 	public ModelAndView toxicString(@RequestParam("toxstring") String toxstring) {
 		toxstring.toLowerCase();
+		
+		ModelAndView mv = new ModelAndView("toxictospecific");
+		mv.addObject("userstring", toxstring);
+		
 		ArrayList<PoisonToPets> toxic = new ArrayList<>();
 		PoisonToPets plant = new PoisonToPets();
 		int index = 0;
@@ -127,8 +131,9 @@ public class ToxicToPetsController {
 			}
 
 		}
+		mv.addObject("plantsearch", toxic);
 
-		return new ModelAndView("toxictospecific", "plantsearch", toxic);
+		return mv;
 	}
 
 	@RequestMapping("/toxicdetails")

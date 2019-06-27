@@ -16,11 +16,15 @@
 			bis_skin_checked="1">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="/">Home </a></li>
-				<li class="nav-item"><a class="nav-link" href="/toxicitypage">List of Toxic Plants</a></li>
+				<li class="nav-item"><a class="nav-link" href="/toxicitypage">Toxic Plant Search</a></li>
 				<li class="nav-item"><a class="nav-link" href="/inventorylogin">Garden
 						Inventory</a></li>
+				
+				<!--  
 				<li class="nav-item"><a class="nav-link" href="/search">Advanced
 						Search</a></li>
+				 -->
+				
 				<li class="nav-item"><a class="nav-link" href="/about">About</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="/inventorylogin">Login</a>
@@ -31,7 +35,8 @@
 			<form class="form-inline my-2 my-lg-0" action="findplants">
 				<input class="form-control mr-sm-2" type="text" name="plantname"
 					placeholder="Try 'aloe vera'"> <br>
-
+				
+				<!--  nametype doesnt matter b/c search controller passes in name param through search controller
 				<div class="btn-group btn-group-toggle" data-toggle="buttons"
 					bis_skin_checked="1">
 					<label class="btn btn-success"> <input type="radio"
@@ -40,6 +45,7 @@
 						name="nametype" value="common" checked>Common
 					</label>
 				</div>
+				 -->
 
 				<button class="btn btn-warning my-2 my-sm-0" type="submit">Find
 					My Plant</button>

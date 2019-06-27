@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+body {
+	/* The image used */
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+		url("https://awkwardbotany.files.wordpress.com/2015/07/castor-bean-flowers-and-fruits.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+}
+
+.title {
+	font-family: "PT Serif";
+	font-weight: bold;
+}
+
+.plantdetails {
+	font-family: "PT Serif";
+	font-size: .9em;
+}
+

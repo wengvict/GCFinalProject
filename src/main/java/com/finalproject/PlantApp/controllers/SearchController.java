@@ -1,5 +1,6 @@
 package com.finalproject.PlantApp.controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,72 +35,95 @@ public class SearchController {
 	String trefleKey;
 
 	@RequestMapping("/findplants")
-	public ModelAndView mainSearch(@RequestParam("plantname") String plantname,
-			@RequestParam("nametype") String nametype) {
+	public ModelAndView mainSearch(@RequestParam("plantname") String plantname) {
+		
+		// no need b/c responseentity already searches all names
+//			,@RequestParam("nametype") String nametype) {
+		
 		ModelAndView mv = new ModelAndView("searchresults");
 
 		plantname.toLowerCase();
 		String token = TrefleService.getToken(trefleKey);
 
-		ResponseEntity<TreflePlant[]> getPlant = TrefleService.getTreflePlantArray(plantname, token);
+		ResponseEntity<TreflePlant[]> getPlantNotByPages = TrefleService.getTreflePlantArray(plantname, token);
 		Map<TreflePlant, PlantPics> plantMap = new HashMap<TreflePlant, PlantPics>();
-		int pages = Integer.parseInt(getPlant.getHeaders().get("total-pages").get(0).toString());
-
+		int pages = Integer.parseInt(getPlantNotByPages.getHeaders().get("total-pages").get(0).toString());
+		
+//		ResponseEntity<TreflePlant[]> getPlant = TrefleService.getTreflePlantArrayByPages(plantname, token, pages);
+		System.out.println(pages);
+		
+		// commented out because nested for-loop was causing some logic errors
 		for (int j = 0; j < pages; j++) {
-			for (int i = 0; i < getPlant.getBody().length; i++) {
+			
+			ResponseEntity<TreflePlant[]> getPlant = TrefleService.getTreflePlantArrayByPages(plantname, token, j + 1);
 
-				if (getPlant.getBody()[i].getComplete_data() == true) {
+		for (int i = 0; i < getPlant.getBody().length; i++) {
+			
+			// was only sending back one result even tho some had complete data. when commented out, results filled up
+			// if (getPlant.getBody()[i].getComplete_data() == true) {
 
-					if (getPlant.getBody()[i].getCommon_name() != null) {
-						// System.out.println(getPlant[i].getCommon_name());
+			if (getPlant.getBody()[i].getCommon_name() != null) {
+				// System.out.println(getPlant[i].getCommon_name());
+				
+				// no need b/c passing plantname through responseentity already checks api for plant name
+				// if (nametype.equalsIgnoreCase("common")) {
+				TreflePlant plant = getPlant.getBody()[i];
+				TrefleOuter outer = TrefleService.getImage(getPlant.getBody()[i].getId(), token);
 
-						if (nametype.equalsIgnoreCase("common")) {
-							TreflePlant plant = getPlant.getBody()[i];
-							TrefleOuter outer = TrefleService.getImage(getPlant.getBody()[i].getId(), token);
-							PlantPics pics = outer.getImages().get(0);
-							plantMap.put(plant, pics);
-
-						} else if (nametype.equalsIgnoreCase("scientific")) {
-							TreflePlant plant = getPlant.getBody()[i];
-							TrefleOuter outer = TrefleService.getImage(getPlant.getBody()[i].getId(), token);
-							PlantPics pics = outer.getImages().get(0);
-							plantMap.put(plant, pics);
-						}
-					}
-				}
-			}
-		}
-		mv.addObject("search", plantname);
-		mv.addObject("map", plantMap);
-		return mv;
-	}
-
-	@RequestMapping("/allthethings")
-	public ModelAndView mainSearch(@RequestParam("name") String plantname) {
-		ModelAndView mv = new ModelAndView("searchresults");
-
-		plantname.toLowerCase();
-		String token = TrefleService.getToken(trefleKey);
-
-		ResponseEntity<TreflePlant[]> getPlant = TrefleService.getTreflePlantArray(plantname, token);
-		Map<TreflePlant, PlantPics> plantMap = new HashMap<TreflePlant, PlantPics>();
-		int pages = Integer.parseInt(getPlant.getHeaders().get("total-pages").get(0).toString());
-
-		for (int j = 0; j < pages; j++) {
-			for (int i = 0; i < getPlant.getBody().length; i++) {
-
-				if (getPlant.getBody()[i].getCommon_name() != null) {
-					// System.out.println(getPlant[i].getCommon_name());
-					TreflePlant plant = getPlant.getBody()[i];
-					PlantPics pics =  new PlantPics("");
+				// validates that images is not null
+				if (outer.getImages().size() > 0) {
+					PlantPics pics = outer.getImages().get(0);
 					plantMap.put(plant, pics);
-				}
+
+				}		
+						// same reason as the common nametype above
+//						} else if (nametype.equalsIgnoreCase("scientific")) {
+//							TreflePlant plant = getPlant.getBody()[i];
+//							TrefleOuter outer = TrefleService.getImage(getPlant.getBody()[i].getId(), token);
+
+//							if (outer.getImages().size() > 0) {
+//							PlantPics pics = outer.getImages().get(0);
+//							plantMap.put(plant, pics);
+//							}
+				// }
 			}
+			}
+			//}
 		}
+		
+//		System.out.println(plantMap.values().size());
 		mv.addObject("search", plantname);
 		mv.addObject("map", plantMap);
 		return mv;
 	}
+
+	// completedata doesnt return the things we want to see
+//	@RequestMapping("/allthethings")
+//	public ModelAndView mainSearch(@RequestParam("name") String plantname) {
+//		ModelAndView mv = new ModelAndView("searchresults");
+//
+//		plantname.toLowerCase();
+//		String token = TrefleService.getToken(trefleKey);
+//
+//		ResponseEntity<TreflePlant[]> getPlant = TrefleService.getTreflePlantArray(plantname, token);
+//		Map<TreflePlant, PlantPics> plantMap = new HashMap<TreflePlant, PlantPics>();
+//		int pages = Integer.parseInt(getPlant.getHeaders().get("total-pages").get(0).toString());
+//
+//		for (int j = 0; j < pages; j++) {
+//			for (int i = 0; i < getPlant.getBody().length; i++) {
+//
+//				if (getPlant.getBody()[i].getCommon_name() != null) {
+//					// System.out.println(getPlant[i].getCommon_name());
+//					TreflePlant plant = getPlant.getBody()[i];
+//					PlantPics pics =  new PlantPics("");
+//					plantMap.put(plant, pics);
+//				}
+//			}
+//		}
+////		mv.addObject("search", plantname);
+////		mv.addObject("map", plantMap);
+//		return mv;
+//	}
 
 	@RequestMapping("/plantpage")
 	public ModelAndView plantDetails(@RequestParam("plantid") String plantid) {
@@ -109,47 +133,25 @@ public class SearchController {
 
 		TrefleOuter plant = rt.getForObject(plUrl, TrefleOuter.class);
 
-		// got too carried away and tried implementing toxicity, did not have enough
-		// time to figure it out
-
-//		String toxUrl = "https://wengvict.github.io/ToxicPlantApi/ToxicPlants.json";
-//		PoisonToPetsOuter getKillerPlant = rt.getForObject(url, PoisonToPetsOuter.class);
-//		
-//		ArrayList<PoisonToPets> list = getKillerPlant.getToxicplant();
-//		System.out.println(list.size());
-//		
-//		PoisonToPets poisonObj = new PoisonToPets();
-//		
-//		for(int i = 0; i < list.size(); i++) {
-//			System.out.println(list.get(i).getPoisonproperty());
-//			if(list.get(i).getScientificname().contains(plant.getGenus().getName())) {
-//				poisonObj = list.get(i);
-//				//System.out.println(list.get(i).getCommonname());
-//			} 
-//		}
-//
-//
-//		HttpHeaders headers = new HttpHeaders();
-//		headers.add("toxic", poisonObj.getCats());
-
 		return new ModelAndView("plantpage", "plantfacts", plant);
 	}
 
 	@RequestMapping("/addplant")
 	public ModelAndView addPlant(HttpSession session, @RequestParam("scientificname") String scientificname) {
 		User user = (User) session.getAttribute("user");
-		if(user == null) {
-			
+		if (user == null) {
+
 			return new ModelAndView("userlogin", "pName", scientificname);
-		}else {
-			PlantInventory addplant = new PlantInventory(scientificname, null, null, null, null, null, user.getUserId());
+		} else {
+			PlantInventory addplant = new PlantInventory(scientificname, null, null, null, null, null,
+					user.getUserId());
 			pir.save(addplant);
 
 			// this saves plant but we will have to work on showing the results table with
 			// the expressions language tag
 			return new ModelAndView("redirect:/inventory", "addconfirm", "Plant has been added!");
 		}
-		
+
 	}
 
 }

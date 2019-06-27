@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Plant Inventory</title>
+<title>My Garden || Plantopedia</title>
 </head>
 <body>
 
