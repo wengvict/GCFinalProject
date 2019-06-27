@@ -14,7 +14,7 @@
 
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Toxic Search Result || Plantopedia</title>
 </head>
 <body>
 

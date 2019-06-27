@@ -11,7 +11,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="byletter.css">
 <meta charset="UTF-8">
-<title>Results By Letter</title>
+<title>Toxic Plants for "${userletter }" || Plantopedia </title>
 </head>
 <body>
 <%@ include file="partials/navbar.jsp"%>

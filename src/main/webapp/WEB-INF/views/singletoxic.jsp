@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="singletoxicstyle.css">
 	
 <meta charset="UTF-8">
-<title>Toxic Plant</title>
+<title>${donteat.scientificname} || Plantopedia</title>
 </head>
 <body>
 <%@ include file="partials/navbar.jsp"%>

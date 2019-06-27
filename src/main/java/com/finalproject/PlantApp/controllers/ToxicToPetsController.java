@@ -48,6 +48,7 @@ public class ToxicToPetsController {
 			}
 		}
 		mv.addObject("all", arr);
+		mv.addObject("userletter", letter);
 		System.out.println(arr);
 		return mv;
 
@@ -106,7 +107,6 @@ public class ToxicToPetsController {
 
 				}
 			}
-			
 
 		}
 		poisonList.sort(Comparator.comparing(PoisonToPets::getCommonname));
